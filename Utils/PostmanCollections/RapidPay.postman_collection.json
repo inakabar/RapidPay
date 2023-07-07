@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "6e8c1ac0-a8a6-4432-946d-1aa50da94057",
+		"name": "RapidPay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Card Balance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{tokenApi}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7166/api/CardManagement?cardNumber=150102031467892",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"CardManagement"
+					],
+					"query": [
+						{
+							"key": "cardNumber",
+							"value": "150102031467892"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Card",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{tokenApi}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Maria Dos Santos\",\r\n    \"CardNumber\": \"350102031467823\",\r\n    \"Balance\": 10.03\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7166/api/CardManagement",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"CardManagement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Value To Balance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{tokenApi}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CardNumber\": \"150102031467892\",\r\n    \"Value\": 10000.02\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7166/api/CardManagement",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"CardManagement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make Payment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{tokenApi}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CardNumber\": \"150102031467892\",\r\n    \"PaymentValue\": 111.03\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7166/api/CardManagement/MakePayment",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"CardManagement",
+						"MakePayment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HealthyCheck",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{tokenApi}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CardNumber\": \"150102031467892\",\r\n    \"PaymentValue\": 111.03\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7166/health",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

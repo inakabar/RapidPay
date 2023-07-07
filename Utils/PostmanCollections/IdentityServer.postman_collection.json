@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "689db5df-8615-4691-9d36-edc32c52eb3d",
+		"name": "IdentityServer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token - Admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"console.log(jsonData.access_token);\r",
+							"postman.setEnvironmentVariable(\"tokenApi\", jsonData.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkJBMkEyQ0IyMzYzNEI1NkE3NzEzRjIzN0Y3NDBGN0JCIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2ODg1ODE1NDQsImV4cCI6MTY4ODU4NTE0NCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTQ0MyIsImF1ZCI6IkFQSSIsImNsaWVudF9pZCI6Im0ybS5jbGllbnQtYWRtaW4iLCJqdGkiOiI1MzdFMkFEMDJDMzNGMDdBMUE1QjNDNjA1MDE3NDMyRCIsImlhdCI6MTY4ODU4MTU0NCwic2NvcGUiOlsiQVBJLnJlYWQiLCJBUEkud3JpdGUiXX0.wNFzCH3z0WemKWr6VTQH1TaDI_vv6_wfknA8tgcXMsEG9edj_-DCRANEEkrDUnQLIVtHZKtQIULBAv5LdHX9BpY_I21XDwVEVD_neZXuLq4R58qiKss_UX1kst69GQE-ICooCmIiiLFZqUXAO-pG-gcFasnwGWJlIYqpy479CGvsxtx0seV2CN53GPQOTbrKOMt-JCod6Q5VNHO2fT-FUfesKTeW93oBvwMEkp4no-zZ-wu9nlrwWr3_AgMgkMxr8_v3khmT8E4JSRKw0QEU5tf6M6wbV5u4xUgRqh0ZKXtkcTf-dW94lUTS-KuK6tYKjKW9_0D_3HlqkrBnrSQ2YQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "m2m.client-admin",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "SuperSecretPassword",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:5443/connect/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5443",
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token - ReadOnly",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"console.log(jsonData.access_token);\r",
+							"postman.setEnvironmentVariable(\"tokenApi\", jsonData.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkJBMkEyQ0IyMzYzNEI1NkE3NzEzRjIzN0Y3NDBGN0JCIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2ODg1ODE1NDQsImV4cCI6MTY4ODU4NTE0NCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTQ0MyIsImF1ZCI6IkFQSSIsImNsaWVudF9pZCI6Im0ybS5jbGllbnQtYWRtaW4iLCJqdGkiOiI1MzdFMkFEMDJDMzNGMDdBMUE1QjNDNjA1MDE3NDMyRCIsImlhdCI6MTY4ODU4MTU0NCwic2NvcGUiOlsiQVBJLnJlYWQiLCJBUEkud3JpdGUiXX0.wNFzCH3z0WemKWr6VTQH1TaDI_vv6_wfknA8tgcXMsEG9edj_-DCRANEEkrDUnQLIVtHZKtQIULBAv5LdHX9BpY_I21XDwVEVD_neZXuLq4R58qiKss_UX1kst69GQE-ICooCmIiiLFZqUXAO-pG-gcFasnwGWJlIYqpy479CGvsxtx0seV2CN53GPQOTbrKOMt-JCod6Q5VNHO2fT-FUfesKTeW93oBvwMEkp4no-zZ-wu9nlrwWr3_AgMgkMxr8_v3khmT8E4JSRKw0QEU5tf6M6wbV5u4xUgRqh0ZKXtkcTf-dW94lUTS-KuK6tYKjKW9_0D_3HlqkrBnrSQ2YQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "m2m.client.readonly",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "SuperSecretPassword",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:5443/connect/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5443",
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

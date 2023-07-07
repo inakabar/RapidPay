@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{050184AF-F9DD-41D4-8FD6-AC1E1DD219AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth", "Auth", "{9C4B220B-39EB-4A92-A78C-18B451B961EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "Auth\IdentityServer\IdentityServer.csproj", "{ED06979F-EF91-4918-A47F-DBA6CADE1290}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RapidPay.Api", "src\RapidPay.Api\RapidPay.Api.csproj", "{5C0F494F-3FFF-4661-A8A7-8679555DA319}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RapidPay.DataAccess", "src\RapidPay.DataAccess\RapidPay.DataAccess.csproj", "{288BB0FF-0314-4A6E-B48F-9789129F5BA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9B2E19AD-E49D-48FD-8AF3-4EBAD6C13881}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RapidPay.Tests", "tests\RapidPay.Tests\RapidPay.Tests.csproj", "{AE96B24D-FF5F-46A7-BAA2-43E5E7302B78}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{7C99734D-9816-45D3-93B8-D63709CBA690}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PostmanCollections", "PostmanCollections", "{2CE51B6F-2879-4657-BA94-8F10DC487FCE}"
+	ProjectSection(SolutionItems) = preProject
+		Utils\PostmanCollections\IdentityServer.postman_collection.json = Utils\PostmanCollections\IdentityServer.postman_collection.json
+		Utils\PostmanCollections\RapidPay.postman_collection.json = Utils\PostmanCollections\RapidPay.postman_collection.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED06979F-EF91-4918-A47F-DBA6CADE1290}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED06979F-EF91-4918-A47F-DBA6CADE1290}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED06979F-EF91-4918-A47F-DBA6CADE1290}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED06979F-EF91-4918-A47F-DBA6CADE1290}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C0F494F-3FFF-4661-A8A7-8679555DA319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C0F494F-3FFF-4661-A8A7-8679555DA319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C0F494F-3FFF-4661-A8A7-8679555DA319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C0F494F-3FFF-4661-A8A7-8679555DA319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{288BB0FF-0314-4A6E-B48F-9789129F5BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{288BB0FF-0314-4A6E-B48F-9789129F5BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{288BB0FF-0314-4A6E-B48F-9789129F5BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{288BB0FF-0314-4A6E-B48F-9789129F5BA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE96B24D-FF5F-46A7-BAA2-43E5E7302B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE96B24D-FF5F-46A7-BAA2-43E5E7302B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE96B24D-FF5F-46A7-BAA2-43E5E7302B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE96B24D-FF5F-46A7-BAA2-43E5E7302B78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ED06979F-EF91-4918-A47F-DBA6CADE1290} = {9C4B220B-39EB-4A92-A78C-18B451B961EF}
+		{5C0F494F-3FFF-4661-A8A7-8679555DA319} = {050184AF-F9DD-41D4-8FD6-AC1E1DD219AD}
+		{288BB0FF-0314-4A6E-B48F-9789129F5BA2} = {050184AF-F9DD-41D4-8FD6-AC1E1DD219AD}
+		{AE96B24D-FF5F-46A7-BAA2-43E5E7302B78} = {9B2E19AD-E49D-48FD-8AF3-4EBAD6C13881}
+		{2CE51B6F-2879-4657-BA94-8F10DC487FCE} = {7C99734D-9816-45D3-93B8-D63709CBA690}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A263352-C6D1-4052-84E2-3415F9C564DD}
+	EndGlobalSection
+EndGlobal
